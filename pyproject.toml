@@ -8,7 +8,7 @@ requires = ["hatchling"]
 # project
 [project]
 authors = [{name = "Derek Wan", email = "d.wan@icloud.com"}]
-dependencies = ["numpy"]
+dependencies = ["hypothesis==6.100.8", "numpy", "pytest", "pytest-xdist"]
 dynamic = ["version"]
 name = "hypothesis-6-100-8"
 readme = "README.md"
@@ -16,9 +16,6 @@ requires-python = ">= 3.12"
 
 [project.optional-dependencies]
 dev = [
-  "dycw-utilities[test] >= 0.26.48, < 0.27",
-  "hatch >= 1.10.0, < 1.11",
-  "pytest-cov >= 5.0.0, < 5.1",
 ]
 
 # coverage
@@ -89,9 +86,6 @@ addopts = [
   "-ra",
   "-vv",
   "--color=auto",
-  "--cov=hypothesis_6_100_8",
-  "--cov-config=pyproject.toml",
-  "--cov-report=html",
   "--strict-markers",
 ]
 filterwarnings = ["error"]
