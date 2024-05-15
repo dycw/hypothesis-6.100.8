@@ -89,7 +89,7 @@ addopts = [
   "-ra",
   "-vv",
   "--color=auto",
-  "--cov=hypothesis_6.100.8",
+  "--cov=hypothesis_6_100_8",
   "--cov-config=pyproject.toml",
   "--cov-report=html",
   "--strict-markers",

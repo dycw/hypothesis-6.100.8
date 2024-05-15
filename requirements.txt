@@ -17,6 +17,7 @@ coverage==7.5.1
 distlib==0.3.8
     # via virtualenv
 dycw-utilities==0.26.57
+    # via hypothesis-6-100-8 (pyproject.toml)
 exceptiongroup==1.2.1
     # via dycw-utilities
 execnet==2.1.1
@@ -26,6 +27,7 @@ filelock==3.14.0
 h11==0.14.0
     # via httpcore
 hatch==1.10.0
+    # via hypothesis-6-100-8 (pyproject.toml)
 hatchling==1.24.2
     # via hatch
 httpcore==1.0.5
@@ -89,6 +91,7 @@ pytest==8.2.0
     #   pytest-rerunfailures
     #   pytest-xdist
 pytest-cov==5.0.0
+    # via hypothesis-6-100-8 (pyproject.toml)
 pytest-randomly==3.15.0
     # via dycw-utilities
 pytest-rerunfailures==14.0
