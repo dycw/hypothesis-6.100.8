@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dycw_template import __version__
+from hypothesis_6_100_8 import __version__
 
 
 def test_main() -> None:
