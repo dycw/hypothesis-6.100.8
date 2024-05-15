@@ -102,13 +102,9 @@ xfail_strict = true
 # ruff
 [tool.ruff]
 extend-exclude = ["**/*.ipynb"]
-line-length = 320
 src = ["src"]
 target-version = "py312"
 unsafe-fixes = true
-
-[tool.ruff.format]
-skip-magic-trailing-comma = true
 
 [tool.ruff.lint]
 ignore = [
@@ -157,4 +153,3 @@ ban-relative-imports = "all"
 
 [tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
-split-on-trailing-comma = false
