@@ -8,9 +8,9 @@ requires = ["hatchling"]
 # project
 [project]
 authors = [{name = "Derek Wan", email = "d.wan@icloud.com"}]
-dependencies = []
+dependencies = ["numpy"]
 dynamic = ["version"]
-name = "hypothesis-6.100.8"
+name = "hypothesis-6-100-8"
 readme = "README.md"
 requires-python = ">= 3.12"
 
@@ -45,10 +45,10 @@ parallel = true
 sources = ["src"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/hypothesis_6.100.8"]
+packages = ["src/hypothesis_6_100_8"]
 
 [tool.hatch.version]
-path = "src/hypothesis_6.100.8/__init__.py"
+path = "src/hypothesis_6_100_8/__init__.py"
 
 # nitpick
 [tool.nitpick]
