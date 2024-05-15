@@ -10,7 +10,7 @@ requires = ["hatchling"]
 authors = [{name = "Derek Wan", email = "d.wan@icloud.com"}]
 dependencies = []
 dynamic = ["version"]
-name = "dycw-template"
+name = "hypothesis-6.100.8"
 readme = "README.md"
 requires-python = ">= 3.12"
 
@@ -45,10 +45,10 @@ parallel = true
 sources = ["src"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/dycw_template"]
+packages = ["src/hypothesis_6.100.8"]
 
 [tool.hatch.version]
-path = "src/dycw_template/__init__.py"
+path = "src/hypothesis_6.100.8/__init__.py"
 
 # nitpick
 [tool.nitpick]
@@ -89,7 +89,7 @@ addopts = [
   "-ra",
   "-vv",
   "--color=auto",
-  "--cov=dycw_template",
+  "--cov=hypothesis_6.100.8",
   "--cov-config=pyproject.toml",
   "--cov-report=html",
   "--strict-markers",
@@ -102,9 +102,13 @@ xfail_strict = true
 # ruff
 [tool.ruff]
 extend-exclude = ["**/*.ipynb"]
+line-length = 320
 src = ["src"]
 target-version = "py312"
 unsafe-fixes = true
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
 
 [tool.ruff.lint]
 ignore = [
@@ -153,3 +157,4 @@ ban-relative-imports = "all"
 
 [tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
+split-on-trailing-comma = false
