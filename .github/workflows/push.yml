@@ -1,0 +1,19 @@
+name: push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: butlerlogic/action-autotag@1.1.2 # https://github.com/ButlerLogic/action-autotag/issues/45#issuecomment-1825726927
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          strategy: regex
+          root: src/dycw_template/__init__.py
+          regex_pattern: '__version__ = "(?<version>\d+\.\d+\.\d+)"'
